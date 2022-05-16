@@ -463,6 +463,9 @@ namespace SuperNewRoles.CustomOption
         public static CustomOption QuarreledTeamCount;
         public static CustomOption QuarreledOnlyCrewMate;
 
+        public static CustomOption YoutuberOption;
+        public static CustomOption YoutuberPlayerCount;
+
         public static CustomOption LoversOption;
         public static CustomOption LoversTeamCount;
         public static CustomOption LoversPar;
@@ -960,6 +963,9 @@ namespace SuperNewRoles.CustomOption
             LoversCommonTask = loversoption.Item1;
             LoversShortTask = loversoption.Item2;
             LoversLongTask = loversoption.Item3;
+
+            YoutuberOption = new CustomRoleOption(392, false, CustomOptionType.Crewmate, "YoutuberName", RoleClass.Youtuber.color, 1);
+            YoutuberPlayerCount = CustomOption.Create(393, false, CustomOptionType.Crewmate, "SettingPlayerCountName", CrewPlayers[0], CrewPlayers[1], CrewPlayers[2], CrewPlayers[3], YoutuberOption);
 
             SuperNewRolesPlugin.Logger.LogInfo("設定のidのMax:"+CustomOption.Max);
         }
