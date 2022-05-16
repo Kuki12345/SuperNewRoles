@@ -465,8 +465,8 @@ namespace SuperNewRoles.CustomOption
 
         public static CustomOption YoutuberOption;
         public static CustomOption YoutuberPlayerCount;
-        public static CustomOption YoutuberCoolTime;
-        public static CustomOption YoutuberDurationTime;
+        public static CustomOption YoutuberCoolDownTime;
+        public static CustomOption YoutuberTime;
 
         public static CustomOption LoversOption;
         public static CustomOption LoversTeamCount;
@@ -968,8 +968,8 @@ namespace SuperNewRoles.CustomOption
 
             YoutuberOption = new CustomRoleOption(403, false, CustomOptionType.Crewmate, "YoutuberName", RoleClass.Youtuber.color, 1);
             YoutuberPlayerCount = CustomOption.Create(404, false, CustomOptionType.Crewmate, "SettingPlayerCountName", CrewPlayers[0], CrewPlayers[1], CrewPlayers[2], CrewPlayers[3], YoutuberOption);
-            YoutuberCoolTime = CustomOption.Create(405, false, CustomOptionType.Crewmate, "YoutuberCoolDownSetting", 30f, 2.5f, 60f, 2.5f, YoutuberOption, format: "unitSeconds");
-            YoutuberDurationTime = CustomOption.Create(406, false, CustomOptionType.Crewmate, "YoutuberTimeSetting", 10f, 1f, 20f, 0.5f, YoutuberOption, format: "unitSeconds");
+            YoutuberCoolDownTime = CustomOption.Create(405, false, CustomOptionType.Crewmate, "YoutuberCoolDownSetting", 20f, 2.5f, 60f, 2.5f, YoutuberOption, format: "unitSeconds");
+            YoutuberTime = CustomOption.Create(406, false, CustomOptionType.Crewmate, "YoutuberTimeSetting", 10f, 1f, 20f, 1f, YoutuberOption, format: "unitSeconds");
 
             SuperNewRolesPlugin.Logger.LogInfo("設定のidのMax:"+CustomOption.Max);
         }
