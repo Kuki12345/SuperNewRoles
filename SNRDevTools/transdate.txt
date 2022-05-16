@@ -574,3 +574,7 @@ EvilSeerTitle1,You will see players die,船員の気配を感じ取ろう
 RemoteSheriffName,Remote Sheriff,リモートシェリフ
 RemoteSheriffTitle1,Let's do a Remote Sheriff kill!,遠隔でシェリフキルをしよう
 RemoteSheriffIsKillTeleportSetting,Kill Teleport,キルテレポート
+YoutuberName,Youtuber,ユーチューバー
+YoutuberTitle1,You are famous,あなたは有名です
+YoutuberCoolTime,Youtuber Skill Cool Time,スキルクールダウン
+YoutuberDurationTime,Youtuber Skill Duration Time,スキル持続時間
