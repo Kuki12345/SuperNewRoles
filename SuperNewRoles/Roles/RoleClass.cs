@@ -119,6 +119,7 @@ namespace SuperNewRoles.Roles
             MadSeer.ClearAndReload();
             EvilSeer.ClearAndReload();
             RemoteSheriff.ClearAndReload();
+            Youtuber.ClearAndReload();
             //ロールクリア
             Quarreled.ClearAndReload();
             Lovers.ClearAndReload();
@@ -1687,6 +1688,15 @@ namespace SuperNewRoles.Roles
                 KillCount = new Dictionary<int, int>();
                 IsKillTeleport = CustomOptions.RemoteSheriffIsKillTeleportSetting.getBool();
                 KillCoolTime = CustomOptions.RemoteSheriffCoolTime.getFloat();
+            }
+        }
+        public static class Youtuber
+        {
+            public static List<PlayerControl> YoutuberPlayer;
+            public static Color32 color = new Color32(0, 255, 0, byte.MaxValue);
+            public static void ClearAndReload()
+            {
+                YoutuberPlayer = new List<PlayerControl>();
             }
         }
         //新ロールクラス
