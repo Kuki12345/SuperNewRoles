@@ -576,5 +576,5 @@ RemoteSheriffTitle1,Let's do a Remote Sheriff kill!,遠隔でシェリフキル�
 RemoteSheriffIsKillTeleportSetting,Kill Teleport,キルテレポート
 YoutuberName,Youtuber,ユーチューバー
 YoutuberTitle1,You are famous,あなたは有名です
-YoutuberCoolTime,Youtuber Skill Cool Time,スキルクールダウン
-YoutuberDurationTime,Youtuber Skill Duration Time,スキル持続時間
+YoutuberCoolDoenSetting,Youtuber Skill Cool Time,スキルクールダウン
+YoutuberTimeSetting,Youtuber Skill Duration Time,スキル持続時間

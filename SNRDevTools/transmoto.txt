@@ -575,3 +575,5 @@ RemoteSheriffTitle1
 RemoteSheriffIsKillTeleportSetting
 YoutuberName
 YoutuberTitle1
+YoutuberCoolDoenSetting
+YoutuberTimeSetting
