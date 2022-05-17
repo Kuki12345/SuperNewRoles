@@ -43,6 +43,7 @@ namespace SuperNewRoles.Buttons
         public static CustomButton ImpostorSidekickButton;
         public static CustomButton SideKillerSidekickButton;
         public static CustomButton FalseChargesFalseChargeButton;
+        public static CustomButton YoutuberButton;
 
         public static TMPro.TMP_Text sheriffNumShotsText;
 
@@ -814,6 +815,9 @@ namespace SuperNewRoles.Buttons
             RoleClass.SerialKiller.SuicideKillText.transform.localPosition += new Vector3(-0.05f, 0.7f, 0);
 
             setCustomButtonCooldowns();
+
+            YoutuberButton.buttonText = ModTranslation.getString("YoutubrerName");
+            YoutuberButton.showButtonText = true;
         }
 
     }
