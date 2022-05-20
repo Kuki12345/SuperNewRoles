@@ -573,3 +573,6 @@ EvilSeerTitle1
 RemoteSheriffName
 RemoteSheriffTitle1
 RemoteSheriffIsKillTeleportSetting
+BadWomanName
+BadWomanTitle1
+BadWomanLoveButtonName

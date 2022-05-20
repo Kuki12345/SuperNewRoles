@@ -43,6 +43,7 @@ namespace SuperNewRoles.Buttons
         public static CustomButton ImpostorSidekickButton;
         public static CustomButton SideKillerSidekickButton;
         public static CustomButton FalseChargesFalseChargeButton;
+        public static CustomButton BadWomanLoveButton;
 
         public static TMPro.TMP_Text sheriffNumShotsText;
 
@@ -812,6 +813,35 @@ namespace SuperNewRoles.Buttons
             RoleClass.SerialKiller.SuicideKillText.enableWordWrapping = false;
             RoleClass.SerialKiller.SuicideKillText.transform.localScale = Vector3.one * 0.5f;
             RoleClass.SerialKiller.SuicideKillText.transform.localPosition += new Vector3(-0.05f, 0.7f, 0);
+
+            BadWomanLoveButton = new CustomButton(
+                  () =>
+                  {
+                      if (PlayerControl.LocalPlayer.CanMove && !RoleClass.BadWoman.IsCreate && !PlayerControl.LocalPlayer.IsLovers())
+                      {
+                          var target = setTarget();
+                          if (target == null || target.IsLovers()) return;
+                          RoleClass.BadWoman.IsCreate = true;
+                          RoleHelpers.SetLovers(PlayerControl.LocalPlayer, target);
+                          RoleHelpers.SetLoversRPC(PlayerControl.LocalPlayer, target);
+                      }
+                  },
+                  () => { return RoleHelpers.isAlive(PlayerControl.LocalPlayer) && PlayerControl.LocalPlayer.isRole(CustomRPC.RoleId.truelover) && !RoleClass.truelover.IsCreate; },
+                  () =>
+                  {
+                      return PlayerControl.LocalPlayer.CanMove && setTarget();
+                  },
+                  () => { BadWomanLoveButton.Timer = 0f; BadWomanLoveButton.MaxTimer = 0f; },
+                  RoleClass.BadWoman.getButtonSprite(),
+                  new Vector3(-1.8f, -0.06f, 0),
+                  __instance,
+                  __instance.AbilityButton,
+                  KeyCode.F,
+                  49
+              );
+
+            BadWomanLoveButton.buttonText = ModTranslation.getString("BadWomanloveButtonName");
+            BadWomanLoveButton.showButtonText = true;
 
             setCustomButtonCooldowns();
         }

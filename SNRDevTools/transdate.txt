@@ -574,3 +574,6 @@ EvilSeerTitle1,You will see players die,船員の気配を感じ取ろう
 RemoteSheriffName,Remote Sheriff,リモートシェリフ
 RemoteSheriffTitle1,Let's do a Remote Sheriff kill!,遠隔でシェリフキルをしよう
 RemoteSheriffIsKillTeleportSetting,Kill Teleport,キルテレポート
+BadWomanName,Bad Woman,悪女
+BadWomanTitle1,Play with People's Hearts,人の心を弄ぼう
+BadWomanLoveButtonName,Favorite,本命

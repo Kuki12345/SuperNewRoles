@@ -496,6 +496,9 @@ namespace SuperNewRoles
                 case (CustomRPC.RoleId.RemoteSheriff):
                     Roles.RoleClass.RemoteSheriff.RemoteSheriffPlayer.Add(player);
                     break;
+                case (CustomRPC.RoleId.BadWoman):
+                    Roles.RoleClass.BadWoman.BadWomanPlayer.Add(player);
+                    break;
                 //ロールアド
                 default:
                     SuperNewRolesPlugin.Logger.LogError("setRole: no method found for role type {role}");
@@ -751,6 +754,9 @@ namespace SuperNewRoles
                 case (CustomRPC.RoleId.RemoteSheriff):
                     Roles.RoleClass.RemoteSheriff.RemoteSheriffPlayer.RemoveAll(ClearRemove);
                     break;
+                case (CustomRPC.RoleId.BadWoman):
+                    Roles.RoleClass.BadWoman.BadWomanPlayer.RemoveAll(ClearRemove);
+                    break;
                 //ロールリモベ
 
             }
@@ -829,6 +835,9 @@ namespace SuperNewRoles
                     IsTaskClear = true;
                     break; 
                 case (RoleId.Fox):
+                    IsTaskClear = true;
+                    break; 
+                case (RoleId.BadWoman):
                     IsTaskClear = true;
                     break; 
                 //タスククリアか
@@ -955,6 +964,9 @@ namespace SuperNewRoles
                     IsNeutral = true;
                     break;
                 case (RoleId.Fox):
+                    IsNeutral = true;
+                    break;
+                case (RoleId.BadWoman):
                     IsNeutral = true;
                     break;
                 //第三か
@@ -1363,6 +1375,10 @@ namespace SuperNewRoles
                 {
                     return CustomRPC.RoleId.Fox;
                 }
+            else if (Roles.RoleClass.BadWoman.BadWomanPlayer.IsCheckListPlayerControl(player))
+            {
+                return CustomRPC.RoleId.BadWoman;
+            }
             //ロールチェック
             }
             catch (Exception e)

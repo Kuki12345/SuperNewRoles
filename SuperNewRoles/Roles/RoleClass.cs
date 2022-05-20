@@ -119,6 +119,7 @@ namespace SuperNewRoles.Roles
             MadSeer.ClearAndReload();
             EvilSeer.ClearAndReload();
             RemoteSheriff.ClearAndReload();
+            BadWoman.ClearAndReload();
             //ロールクリア
             Quarreled.ClearAndReload();
             Lovers.ClearAndReload();
@@ -1689,8 +1690,28 @@ namespace SuperNewRoles.Roles
                 KillCoolTime = CustomOptions.RemoteSheriffCoolTime.getFloat();
             }
         }
+        public static class BadWoman
+        {
+            public static List<PlayerControl> BadWomanPlayer;
+            public static Color32 color = Lovers.color;
+            public static bool IsCreate;
+            public static List<int> CreatePlayers;
+            private static Sprite ButtonSprite;
+            public static Sprite getButtonSprite()
+            {
+                if (ButtonSprite) return ButtonSprite;
+                ButtonSprite = ModHelpers.loadSpriteFromResources("SuperNewRoles.Resources.BadWomanLoveButton.png", 115f);
+                return ButtonSprite;
+            }
+            public static void ClearAndReload()
+            {
+               BadWomanPlayer = new List<PlayerControl>();
+                IsCreate = false;
+                CreatePlayers = new List<int>();
+            }
+        }
         //新ロールクラス
-            public static class Quarreled
+        public static class Quarreled
         {
             public static List<List<PlayerControl>> QuarreledPlayer;
             public static Color32 color = new Color32(210, 105, 30, byte.MaxValue);

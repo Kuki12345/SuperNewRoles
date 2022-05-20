@@ -459,6 +459,9 @@ namespace SuperNewRoles.CustomOption
         public static CustomOption EvilSeerLimitSoulDuration;
         public static CustomOption EvilSeerSoulDuration;
 
+        public static CustomOption BadWomanOption;
+        public static CustomOption BadWomanPlayerCount;
+
         public static CustomOption QuarreledOption;
         public static CustomOption QuarreledTeamCount;
         public static CustomOption QuarreledOnlyCrewMate;
@@ -943,6 +946,9 @@ namespace SuperNewRoles.CustomOption
             EvilSeerMode = CustomOption.Create(384, false, CustomOptionType.Impostor, "SeerMode", new string[] { "SeerModeBoth", "SeerModeFlash", "SeerModeSouls" }, EvilSeerOption);
             EvilSeerLimitSoulDuration = CustomOption.Create(385, false, CustomOptionType.Impostor, "SeerLimitSoulDuration", false, EvilSeerOption);
             EvilSeerSoulDuration = CustomOption.Create(386, false, CustomOptionType.Impostor, "SeerSoulDuration", 15f, 0f, 120f, 5f, EvilSeerLimitSoulDuration, format: "unitCouples");
+
+            BadWomanOption = new CustomRoleOption(403, true, CustomOptionType.Neutral, "BadWomanName", RoleClass.BadWoman.color, 1);
+            BadWomanPlayerCount = CustomOption.Create(404, true, CustomOptionType.Neutral, "SettingPlayerCountName", CrewPlayers[0], CrewPlayers[1], CrewPlayers[2], CrewPlayers[3], BadWomanOption);
 
             QuarreledOption = CustomOption.Create(122, true, CustomOptionType.Neutral, cs(RoleClass.Quarreled.color, "QuarreledName"), false, null, isHeader: true);
             QuarreledTeamCount = CustomOption.Create(124, true, CustomOptionType.Neutral, "QuarreledTeamCountSetting", QuarreledPlayers[0], QuarreledPlayers[1], QuarreledPlayers[2], QuarreledPlayers[3], QuarreledOption);

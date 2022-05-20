@@ -2299,6 +2299,18 @@
  "RemoteSheriffIsKillTeleportSetting" : {
         "0" : "Kill Teleport" ,
         "11" : "\u30ad\u30eb\u30c6\u30ec\u30dd\u30fc\u30c8"
+        } ,
+ "BadWomanName" : {
+        "0" : "Bad Woman" ,
+        "11" : "\u60aa\u5973"
+        } ,
+ "BadWomanTitle1" : {
+        "0" : "Play with People's Hearts" ,
+        "11" : "\u4eba\u306e\u5fc3\u3092\u5f04\u307c\u3046"
+        } ,
+ "BadWomanLoveButtonName" : {
+        "0" : "Favorite" ,
+        "11" : "\u672c\u547d"
         } 
 
 }
