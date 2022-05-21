@@ -831,8 +831,7 @@ namespace SuperNewRoles.Buttons
                           var target = setTarget();
                           if (target == null || target.IsLovers()) return;
                           RoleClass.BadWoman.IsCreate = true;
-                          RoleHelpers.SetLovers(PlayerControl.LocalPlayer, target);
-                          RoleHelpers.SetLoversRPC(PlayerControl.LocalPlayer, target);
+                          Patch.SetNamesClass.KeepSet;
                       }
                   },
                   () => { return RoleHelpers.isAlive(PlayerControl.LocalPlayer) && PlayerControl.LocalPlayer.isRole(CustomRPC.RoleId.BadWoman) && !RoleClass.BadWoman.IsCreate; },

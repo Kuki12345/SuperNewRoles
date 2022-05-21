@@ -282,6 +282,19 @@ namespace SuperNewRoles.Patch
                     }
                 }
             }
+          public static void KeepSet()
+          {
+            string suffix = ModHelpers.cs(RoleClass.Lovers.color, " ♥");
+            if (!PlayerControl.LocalPlayer.IsLovers() && PlayerControl.LocalPlayer.isAlive())
+            {
+                PlayerControl side = PlayerControl.LocalPlayer.GetOneSideLovers();
+                SetPlayerNameText(PlayerControl.LocalPlayer, PlayerControl.LocalPlayer.nameText.text + suffix);
+                if (!side.Data.Disconnected)
+                {
+                    SetPlayerNameText(side, side.nameText.text + suffix);
+                }
+            }
+        }
         }
     public class SetNameUpdate
     {
