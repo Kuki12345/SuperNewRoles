@@ -1695,6 +1695,7 @@ namespace SuperNewRoles.Roles
             public static List<PlayerControl> BadWomanPlayer;
             public static Color32 color = Lovers.color;
             public static bool IsCreate;
+            public static bool IsCreateKeep;
             public static List<int> CreatePlayers;
             private static Sprite ButtonSprite;
             public static Sprite getButtonSprite()
@@ -1707,6 +1708,7 @@ namespace SuperNewRoles.Roles
             {
                BadWomanPlayer = new List<PlayerControl>();
                 IsCreate = false;
+                IsCreateKeep = false;
                 CreatePlayers = new List<int>();
             }
         }

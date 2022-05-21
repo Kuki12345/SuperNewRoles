@@ -817,7 +817,16 @@ namespace SuperNewRoles.Buttons
             BadWomanLoveButton = new CustomButton(
                   () =>
                   {
-                      if (PlayerControl.LocalPlayer.CanMove && !RoleClass.BadWoman.IsCreate && !PlayerControl.LocalPlayer.IsLovers())
+                      if (PlayerControl.LocalPlayer.CanMove && !RoleClass.BadWoman.IsCreate && !RoleClass.BadWoman.IsCreateKeep && !PlayerControl.LocalPlayer.IsLovers())
+                      {
+                          var target = setTarget();
+                          if (target == null || target.IsLovers()) return;
+                          RoleClass.BadWoman.IsCreate = false;
+                          RoleClass.BadWoman.IsCreateKeep = true;
+                          RoleHelpers.SetLovers(PlayerControl.LocalPlayer, target);
+                          RoleHelpers.SetLoversRPC(PlayerControl.LocalPlayer, target);
+                      }
+                      if (PlayerControl.LocalPlayer.CanMove && !RoleClass.BadWoman.IsCreate && RoleClass.BadWoman.IsCreate && !PlayerControl.LocalPlayer.IsLovers())
                       {
                           var target = setTarget();
                           if (target == null || target.IsLovers()) return;
