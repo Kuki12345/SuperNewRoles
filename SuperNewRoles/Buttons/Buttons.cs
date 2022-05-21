@@ -826,7 +826,7 @@ namespace SuperNewRoles.Buttons
                           RoleHelpers.SetLoversRPC(PlayerControl.LocalPlayer, target);
                       }
                   },
-                  () => { return RoleHelpers.isAlive(PlayerControl.LocalPlayer) && PlayerControl.LocalPlayer.isRole(CustomRPC.RoleId.truelover) && !RoleClass.truelover.IsCreate; },
+                  () => { return RoleHelpers.isAlive(PlayerControl.LocalPlayer) && PlayerControl.LocalPlayer.isRole(CustomRPC.RoleId.BadWoman) && !RoleClass.BadWoman.IsCreate; },
                   () =>
                   {
                       return PlayerControl.LocalPlayer.CanMove && setTarget();
@@ -840,7 +840,7 @@ namespace SuperNewRoles.Buttons
                   49
               );
 
-            BadWomanLoveButton.buttonText = ModTranslation.getString("BadWomanloveButtonName");
+            BadWomanLoveButton.buttonText = ModTranslation.getString("BadWomanLoveButtonName");
             BadWomanLoveButton.showButtonText = true;
 
             setCustomButtonCooldowns();
