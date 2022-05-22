@@ -11,6 +11,7 @@ using System.Collections;
 using SuperNewRoles.Mode;
 using SuperNewRoles.Helpers;
 using SuperNewRoles.CustomRPC;
+using SuperNewRoles.Patch;
 
 namespace SuperNewRoles.Buttons
 {
@@ -826,12 +827,12 @@ namespace SuperNewRoles.Buttons
                           RoleHelpers.SetLovers(PlayerControl.LocalPlayer, target);
                           RoleHelpers.SetLoversRPC(PlayerControl.LocalPlayer, target);
                       }
-                      if (PlayerControl.LocalPlayer.CanMove && !RoleClass.BadWoman.IsCreate && RoleClass.BadWoman.IsCreate && !PlayerControl.LocalPlayer.IsLovers())
+                      if (PlayerControl.LocalPlayer.CanMove && !RoleClass.BadWoman.IsCreate && RoleClass.BadWoman.IsCreateKeep && !PlayerControl.LocalPlayer.IsLovers())
                       {
                           var target = setTarget();
                           if (target == null || target.IsLovers()) return;
                           RoleClass.BadWoman.IsCreate = true;
-                          Patch.SetNamesClass.KeepSet;
+                          SetNamesClass.KeepSet();
                       }
                   },
                   () => { return RoleHelpers.isAlive(PlayerControl.LocalPlayer) && PlayerControl.LocalPlayer.isRole(CustomRPC.RoleId.BadWoman) && !RoleClass.BadWoman.IsCreate; },

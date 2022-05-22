@@ -282,8 +282,8 @@ namespace SuperNewRoles.Patch
                     }
                 }
             }
-          public static void KeepSet()
-          {
+        public static void KeepSet()
+        {
             string suffix = ModHelpers.cs(RoleClass.Lovers.color, " ♥");
             if (!PlayerControl.LocalPlayer.IsLovers() && PlayerControl.LocalPlayer.isAlive())
             {
@@ -295,7 +295,7 @@ namespace SuperNewRoles.Patch
                 }
             }
         }
-        }
+       }
     public class SetNameUpdate
     {
         public static void Postfix(PlayerControl __instance)
